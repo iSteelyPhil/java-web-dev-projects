@@ -13,7 +13,7 @@ public class Area {
             double area = Circle.getArea(radius);
             System.out.print("The area of circle of radius: " + radius + " is " + area);
 
-        }while(radius < 0);
+        } while (radius < 0);
 
     }
 }

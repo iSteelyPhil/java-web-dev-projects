@@ -27,7 +27,7 @@ public class HashMapGradebook {
                 input.nextLine();
             }
 
-        } while(!newStudent.equals(""));
+        } while (!newStudent.equals(""));
 
         // Print class roster
         System.out.println("\nClass roster:");
