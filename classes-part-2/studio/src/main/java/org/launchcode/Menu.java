@@ -27,6 +27,29 @@ public class Menu {
     public ArrayList<MenuItem> getItems() {
         return items;
     }
+
+    public void addItem(MenuItem newItem){
+        if(!items.contains(newItem)) {
+            items.add(newItem);
+            setLastUpdated(new Date());
+        }else {
+            System.out.println("DUPLICATE FOOD " + newItem.getDescription());
+        }
+    }
+
+    public void removeItem(MenuItem oldItem){
+        items.remove(oldItem);
+    }
+    public String printSingleFood(MenuItem item){
+        return item.toString();
+    }
+    public String printFullMenu(){
+        String result ="";
+        for( MenuItem item : items){
+            result += "\n" + item.toString();
+        }
+        return result;
+    }
 }
 
 
