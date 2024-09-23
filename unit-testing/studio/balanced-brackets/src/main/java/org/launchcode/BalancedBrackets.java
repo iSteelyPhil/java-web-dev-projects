@@ -8,7 +8,7 @@ public class BalancedBrackets {
      * brackets (in that order), none of which mis-nest. We consider a bracket
      * to be square-brackets: [ or ].
      *
-     * The string may contain non-bracket characters as well.
+     * The string may contain non-bracket characters as welAl.
      *
      * These strings have balanced brackets:
      *  "[LaunchCode]", "Launch[Code]", "[]LaunchCode", "", "[]"
@@ -19,6 +19,7 @@ public class BalancedBrackets {
      * @param str - to be validated
      * @return true if balanced, false otherwise
      */
+/*
     public static boolean hasBalancedBrackets(String str) {
         int brackets = 0;
         for (char ch : str.toCharArray()) {
@@ -26,6 +27,22 @@ public class BalancedBrackets {
                 brackets++;
             } else if (ch == ']') {
                 brackets--;
+            }
+        }
+        return brackets == 0;
+    }
+    //
+}*/
+    public static boolean hasBalancedBrackets(String str) {
+        int brackets = 0;
+        for (char ch : str.toCharArray()) {
+            if (ch == '[') {
+                brackets++;
+            } else if (ch == ']') {
+                brackets--;
+            }
+            if( brackets < 0){
+                return false;
             }
         }
         return brackets == 0;
